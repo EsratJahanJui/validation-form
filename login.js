@@ -10,7 +10,7 @@ function validateName() {
     nameError.innerHTML = "Name is required";
     return false;
   }
-  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+  if (!name.match(/^[A-Za-z]+(?:[\s.]+[A-Za-z]+)*\s*$/)) {
     nameError.innerHTML = "Write full name";
     return false;
   }
@@ -18,7 +18,7 @@ function validateName() {
 
   return true;
 }
-
+// /^[A-Za-z]*\s{1}[A-Za-z]*$/
 function validatePhone() {
   let phone = document.getElementById("contact-phone").value;
   if (phone.length == 0) {
@@ -26,12 +26,12 @@ function validatePhone() {
     return false;
   }
 
-  if (phone.length !== 10) {
-    phoneError.innerHTML = "Phone number should be 10 digits";
+  if (phone.length !== 11) {
+    phoneError.innerHTML = "Number should be 11 digits";
     return false;
   }
 
-  if (!phone.match(/^[0-9]{10}$/)) {
+  if (!phone.match(/^\d+$/)) {
     phoneError.innerHTML = "Only digits please";
     return false;
   }
