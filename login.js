@@ -3,6 +3,10 @@ let phoneError = document.getElementById("phone-error");
 let emailError = document.getElementById("email-error");
 let messageError = document.getElementById("message-error");
 let submitError = document.getElementById("submit-error");
+let nameCheck = document.getElementById("name-check");
+let phoneCheck = document.getElementById("phone-check");
+let emailCheck = document.getElementById("email-check");
+let messageCheck = document.getElementById("message-check");
 
 function validateName() {
   let name = document.getElementById("contact-name").value;
@@ -14,7 +18,7 @@ function validateName() {
     nameError.innerHTML = "Write full name";
     return false;
   }
-  nameError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  nameCheck.innerHTML = '<i class="fas fa-check-circle"></i>';
 
   return true;
 }
@@ -27,7 +31,7 @@ function validatePhone() {
   }
 
   if (phone.length !== 11) {
-    phoneError.innerHTML = "Number should be 11 digits";
+    phoneError.innerHTML = "Enter 11 digits";
     return false;
   }
 
@@ -36,7 +40,8 @@ function validatePhone() {
     return false;
   }
 
-  phoneError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  phoneCheck.innerHTML = '<i class="fas fa-check-circle"></i>';
+
   return true;
 }
 
@@ -53,7 +58,8 @@ function validateEmail() {
     return false;
   }
 
-  emailError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  emailCheck.innerHTML = '<i class="fas fa-check-circle"></i>';
+
   return true;
 }
 // /^[A-Za-z\._\-[0-9] *[@][A-Za-z]*[\.][a-z]{2,4}$/)
@@ -68,7 +74,8 @@ function validateMessage() {
     messageError.innerHTML = left + "More characters required";
     return false;
   }
-  messageError.innerHTML = '<i class="fas fa-check-circle"></i>';
+  messageCheck.innerHTML = '<i class="fas fa-check-circle"></i>';
+
   return true;
 }
 

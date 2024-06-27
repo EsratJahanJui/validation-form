@@ -21,8 +21,8 @@
             id="contact-name"
             onkeyup="validateName()"
           />
-
-          <span id="name-error"> </span>
+          <span id="name-check" class="check"></span>
+          <span id="name-error" class="input-span"> </span>
         </div>
 
         <div class="input-group">
@@ -33,7 +33,9 @@
             id="contact-phone"
             onkeyup="validatePhone()"
           />
-          <span id="phone-error"> </span>
+          <span id="phone-check" class="check"></span>
+
+          <span id="phone-error" class="input-span"> </span>
         </div>
 
         <div class="input-group">
@@ -44,7 +46,9 @@
             id="contact-email"
             onkeyup="validateEmail()"
           />
-          <span id="email-error"> </span>
+          <span id="email-check" class="check"></span>
+
+          <span id="email-error" class="input-span"> </span>
         </div>
 
         <div class="input-group">
@@ -55,7 +59,9 @@
             id="contact-message"
             onkeyup="validateMessage()"
           ></textarea>
-          <span id="message-error"> </span>
+          <span id="message-check" class="check"></span>
+
+          <span id="message-error" class="input-span"> </span>
         </div>
         <i class="fa-solid fa-circle-check"></i>
         <button onclick="return validateForm()">Submit</button>
